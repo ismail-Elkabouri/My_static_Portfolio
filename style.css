@@ -1,0 +1,789 @@
+
+
+:root {
+  --mainColor: rgb(146, 135, 135);
+  --mainPadding: 20px;
+  --mainMarging: 10px;
+  --font-family: "Raleway";
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  background-color: hsl(0, 25%, 97%);
+  font-family: "Raleway";
+  padding: 0;
+  margin: 0;
+}
+.page {
+  background-image: url("images./background3.jpg");
+  background-size: cover;
+  background-position-x:  50%;
+  width: 100%px;
+  height: 683px;
+  display:grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 70px auto;
+  display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+
+.head {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: -10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: span 6;
+  box-shadow: 0px 0px 5px 1px black inset;
+ 
+}
+
+ 
+
+
+.home {
+  color: rgb(255, 255, 255);
+  margin-left: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 10px;
+  grid-template-columns: 2;
+  transition: color 1s;
+}
+
+.home:hover {
+  color: red;
+}
+.list {
+  width: 80%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 10px;
+  grid-template-columns: 4;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.list > a {
+  display: flex;
+  justify-content: center;
+}
+
+.list li {
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  display: flex;
+  transition: color 1s;
+}
+.list li:hover {
+  color: red;
+}
+
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: url("");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 6;
+
+
+}
+
+.empty {
+  width: 90%;
+  height: 95%;
+  background-color: rgba(0, 0, 0, 0.504);
+  box-shadow: 1px 0px 10px 5px rgba(237, 234, 234, 0.392);
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: column nowrap;
+  grid-column: span 6;
+  transition: width 1s, height 1s ;
+  
+}
+.empty:hover {
+  width:100%;
+  height: 100%;
+  box-shadow: none;
+}
+
+div.text {
+  color: #ffffff;
+  font-size: 20px;
+  padding: 50px auto;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.main .name {
+  color: red !important;
+} 
+
+
+.nav_botton {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 150px;
+  margin-top: 20px;
+}
+.nav_botton > a {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 15px;
+}
+.nav_botton > a:hover {
+  color: black;
+  background-color: aquamarine;
+  border: 2px solid black;
+
+}
+
+.between {
+  width: 100%;
+  height: 6px;
+  background-color: #04c2c9;
+  position: sticky;
+  top: 40px;
+  z-index: 2;
+}
+
+
+@media (min-width: 576px) {
+  div.text {
+    font-size: 25px;
+  }
+  .list {
+    font-size: 15px;
+  }
+  .home {
+    font-size: 15px;
+  }
+  .nav_botton > a {
+    font-size: 15px;
+  }
+  .page {
+    background-position-y: 30%;
+  }
+}
+@media (min-width: 992px) {
+  
+}
+@media (min-width: 1200px) {
+  div.text {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .list {
+    font-size: 18px;
+  }
+  .home {
+    font-size: 18px;
+  }
+  .nav_botton > a {
+    font-size: 18px;
+  }
+  .head {
+    height: 60px;
+  }
+  .between {
+    top: 50px;
+  }
+}
+@media (min-width: 1400px) {
+  
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+
+}
+
+
+.section .head_section  {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 80px 50%;
+  width: 100%;
+}
+
+.section .child2  {
+  width: 100%;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.section .photo_profile {
+background-image: url("images./profile.jpg");
+background-position: center;
+background-size: cover;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin: 10px auto;
+
+}
+.section .photo_profile:hover {
+  animation: zoom 0.5s  infinite ease-in-out alternate;
+}
+.photo_profile_caption :nth-child(1) {
+  color: rgb(74, 72, 72);
+  font-size: 25px;
+  font-weight: 700;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+
+}
+.photo_profile_caption :nth-child(2) {
+  width: 200px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  text-wrap: balance ;
+}
+
+.section .myskills {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 30px;
+  
+}
+.section .myskills > div  {
+  padding: 10px ;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: animation 0.5s ease-in-out;
+}
+.section .myskills > div:hover {
+  animation: zoom 0.5s  1 ease-in-out alternate;
+}
+@keyframes zoom {
+  from {
+    transform: scale3d(1,1,1);
+  
+  }
+  to {
+    transform: scale3d(1.2,1.2,3);
+    
+  }
+}
+
+.section .myskills :nth-child(1) {
+  background-image: linear-gradient(
+    to right, 
+   #04c2c9, 
+   #04c2c9 100%
+   )
+}
+.section .myskills :nth-child(2) {
+  background-image: linear-gradient(
+    to right, 
+   #04c2c9,
+   #04c2c9 100%
+   )
+}
+.section .myskills :nth-child(3) {
+  background-image: linear-gradient(
+    to right, 
+   #04c2c9 90%, 
+   rgb(157, 160, 160) 90%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(4) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 80%, 
+   rgb(157, 160, 160) 80%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(5) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 80%, 
+   rgb(157, 160, 160) 80%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(6) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 90%, 
+   rgb(157, 160, 160) 90%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(7) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 80%, 
+   rgb(157, 160, 160) 80%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(8) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 80%, 
+   rgb(157, 160, 160) 80%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(9) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 80%, 
+   rgb(157, 160, 160) 80%,
+   rgb(157, 160, 160) 100%
+   )
+}
+.section .myskills :nth-child(10) {
+  background-image: linear-gradient(
+    to right, 
+    #04c2c9 90%, 
+   rgb(157, 160, 160) 90%,
+   rgb(157, 160, 160) 100%
+   )
+}
+
+.section .abilities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 150px 60px 150px 60px;
+  margin-top: 10px;
+  
+}
+.section .abilities .achild1 {
+  grid-column: span 1fr;
+  grid-row: span 150px; 
+}
+.section .abilities .achild2 {
+  grid-column:span 1fr;
+  grid-row: span 150px; 
+}
+.section .abilities .articl0 {
+  grid-column: span 1fr;
+  grid-row: span 60px;
+}
+.section .abilities .articl1 {
+  grid-column: span 1fr;
+  grid-row: span 60px;
+}
+.section .abilities .achild3 {
+  grid-column: span 1fr;
+  grid-row: span 150px;
+}
+.section .abilities .achild5 {
+  grid-column: span 1fr;
+  grid-row: span 150px;
+}
+.section .abilities .articl2 {
+  grid-column: span 1fr;
+  grid-row: span 60px;
+}
+.section .abilities .articl3 {
+  grid-column: span 1fr;
+  grid-row: span 60px;
+}
+
+.section .abilities > div {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 50px;
+  margin-right: 90px;
+  background-color: #04c2c9;
+  border-radius: 10px;
+  transform: translate(66px, 35px);
+}
+
+.section .abilities > div > div {
+  width: 70px;
+  height: 70px;
+  background-color: #04c2c9;
+  transform: rotateZ(45deg);
+  border-radius: 10px;
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.section .abilities > div > div:hover{
+  transform: rotateZ(0deg);
+}
+.section .abilities > div > div  i {
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+}
+
+.section .abilities > article {
+  width: fit-content;
+  height: fit-content;
+  color :rgb(84, 80, 80);
+  font-size: 15px;
+  text-transform: uppercase;
+  transform: translate(64px, -10px);
+}
+
+
+@media (max-width: 575px) {
+  .section .myskills{
+    width: 100%;
+  }
+  .section .abilities {
+    width: 100%;
+  }
+  .section .child2  {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 576px) {
+  .section .myskills{
+    width: 100%;
+  }
+  .section .abilities {
+    width: 100%;
+  }
+  .section .photo_profile {
+    width: 150px;
+    height: 150px;
+  }
+  .section .photo_profile_caption :nth-child(1) {
+    font-size: 30px;
+  }
+  .section .photo_profile_caption :nth-child(2) {
+    font-size: 20px;
+    width: 350px;
+    text-align: center;
+  }
+  .section .abilities > div {
+    transform: translate(178px, 40px);
+    width: 80px;
+    height: 80px;
+  }
+  .section .abilities > div > div {
+    width: 80px;
+   height: 80px;
+  }
+  .section .abilities > article {
+    transform: translate(170px, 0px);
+    font-size: 20px;
+  }
+  .section .abilities {
+    margin-top: 50px;
+  }
+
+}
+@media (min-width: 992px) {
+  
+  .section .myskills {
+    width: 40%;
+  }
+  .section .abilities {
+    width: 40%;
+  }
+  .section .abilities > div {
+    transform: translate(69px, 19px);
+    width: 100px;
+    height: 100px;
+  }
+  .section .abilities > div > div {
+    width: 100px;
+   height: 100px;
+  }
+  .section .abilities > article {
+    transform: translate(59px, 1px);
+    font-size: 25px;
+  }
+  .section .abilities {
+    margin-left: 20px;
+  }
+  .section .abilities {
+    margin-top: 20px;
+  }
+  .section .myskills > div  {
+    font-size: 20px;
+  }
+
+}
+@media (min-width: 1200px) {
+  .section .head_section {
+    font-size: 45px;
+  }
+
+  .section .photo_profile {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .section .photo_profile_caption :nth-child(1) {
+    font-size: 30px;
+  }
+  .section .photo_profile_caption :nth-child(2) {
+    font-size: 20px;
+    width: 450px;
+    text-align: center;
+    line-height: 35px;
+  }
+  .section .child2 {
+    margin-bottom: 100px;
+  }
+  
+  .section .myskills > div {
+    height: 35px;
+  }
+
+}
+@media (min-width: 1400px) {
+  
+}
+
+
+
+.section .work_box {
+  width: 375px;
+  height: 250px;
+  position: relative;
+  
+}
+
+.work_box .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  transition: animation 2s;
+  backface-visibility: hidden;
+}
+ .work_box .card1{
+  background-image: url(images./bookstore.jpeg);
+ }
+ .work_box .card2{
+  background-image: url(images./food.jpeg);
+ }
+ .work_box .card3{
+  background-image: url(images./game.jpeg);
+ }
+
+.work_box .front-side {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform-origin: left center;
+  transition: transform 0.5s;
+}
+.work_box .front-side:hover {
+  transform: rotateX(90deg);
+}
+
+
+.work_box .back-side {
+  background-color: rgb(225, 235, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.405);
+  
+}
+
+.work_box .back-side .box_text > span {
+  font-size: 13px;
+  color: rgba(255, 0, 0, 0.508);
+  margin-left: 30px;
+}
+.work_box .back-side .button {
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.406);
+  border: 2px solid rgb(253, 4, 4, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+div.circl {
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  background-color: hsl(0, 25%, 97%);
+  position: relative;
+  top: 47px;
+  z-index: 1;
+}
+.last_section {
+  width: 100%;
+  height: auto;
+  background-color: #1a2635;
+  color: white;
+}
+
+.last_section .contact_form{
+  width: 80%;
+  font-family: 'Raleway';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column nowrap;
+
+}
+
+.last_section .contact_form > input {
+  width: 300px;
+  height: 50px;
+  background-color:black;
+  color: white;
+  border-bottom: 1px solid rgb(122, 121, 121);
+  border-right: none;
+  padding: 10px;
+  margin: 10px auto;
+  
+}
+.last_section .contact_form > textarea {
+  width: 300px;
+  height: 200px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px auto;
+  border-bottom: 1px solid rgb(122, 121, 121);
+}
+.last_section .contact_form :nth-child(4) {
+  width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  border: 2px solid rgb(103, 102, 102);
+  color: rgb(255, 253, 253);
+  margin-left: 200px;
+
+}
+.last_section .contact_form :nth-child(4):hover {
+  background-color: #04c2c9;
+  color: black;
+}
+.last_section .go_top {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  border-bottom: 1px dotted rgb(103, 102, 102);
+}
+.last_section .go_top > a {
+  color : red;
+  font-size: 40px;
+  transition: transform 1s;
+}
+.last_section .go_top > a:hover {
+  transform: translateY(-20px);
+}
+
+.last_section .social_media {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-flow: row nowrap;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+.last_section .social_media > div > a {
+  width: 50px;
+  height: 50px;
+  background-color: #262f38;
+  color:#ffffff;
+  margin: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s , transform 0.5s;
+}
+.last_section .social_media > div > a:hover {
+  background-color: #04c2c9;
+  transform: translate(2px,2px);
+  color: black;
+}
+.last_section .social_media > div a > i {
+  font-size: 30px;
+  
+}
+
+@media  (min-width: 576px) {
+  .last_section .contact_form :nth-child(4){
+    margin-left: 300px;
+  }
+  .last_section .contact_form > textarea {
+    width: 400px;
+    
+  }
+  .last_section .contact_form > input {
+    width: 400px;
+  }
+}
+@media  (min-width: 992px) {
+  .last_section .contact_form :nth-child(4){
+    margin-left: 500px;
+  }
+  .last_section .contact_form > textarea {
+    width: 500px;
+    
+  }
+  .last_section .contact_form > input {
+    width: 500px;
+  }
+}
